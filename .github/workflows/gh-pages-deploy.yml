@@ -31,10 +31,17 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Create docs directory
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          mkdir -p docs_temp
+          cp -R public/* docs_temp/
+
       - name: Deploy to GitHub Pages
         if: steps.check_changes.outputs.changed == 'true'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: public
+          folder: docs_temp
+          target-folder: docs
           clean: true
