@@ -46,6 +46,27 @@ npm run dev
 - [사용자 시나리오](./docs/SCENARIOS.md)
 - [사용자 가이드](./docs/USER_GUIDE.md)
 
+## GitHub Pages 배포
+
+이 프로젝트는 GitHub Pages를 통해 자동으로 배포됩니다. `public` 폴더의 변경 사항이 `main` 브랜치에 푸시되면 GitHub Actions가 자동으로 변경 사항을 감지하고 웹사이트를 `gh-pages` 브랜치에 배포합니다.
+
+### 수동 배포 방법
+
+필요한 경우 다음 명령을 사용하여 수동으로 배포할 수 있습니다:
+
+```bash
+# 의존성 설치
+npm install
+
+# GitHub Pages에 배포
+npm run deploy
+```
+
+### 배포 URL
+
+배포된 웹사이트는 다음 URL에서 접근할 수 있습니다:
+https://opspresso.github.io/langup-web/
+
 ## 라이선스
 
 MIT

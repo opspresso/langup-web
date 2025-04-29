@@ -1,0 +1,29 @@
+{
+  "name": "langup-web",
+  "version": "1.0.0",
+  "description": "LangUp.ai - AI 기반 언어 학습 플랫폼",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opspresso/langup-web.git"
+  },
+  "keywords": [
+    "language",
+    "learning",
+    "ai",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opspresso/langup-web/issues"
+  },
+  "homepage": "https://github.com/opspresso/langup-web#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
