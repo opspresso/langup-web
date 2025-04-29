@@ -209,6 +209,14 @@ section {
   height: auto;
 }
 
+.flag-emoji {
+  font-size: 3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .more-icon {
   width: 70px;
   height: 70px;
