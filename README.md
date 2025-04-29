@@ -48,7 +48,14 @@ npm run dev
 
 ## GitHub Pages 배포
 
-이 프로젝트는 GitHub Pages를 통해 자동으로 배포됩니다. `public` 폴더의 변경 사항이 `main` 브랜치에 푸시되면 GitHub Actions가 자동으로 변경 사항을 감지하고 웹사이트를 `gh-pages` 브랜치에 배포합니다.
+이 프로젝트는 GitHub Pages를 통해 자동으로 배포됩니다. `public` 폴더의 변경 사항이 `main` 브랜치에 푸시되면 GitHub Actions가 자동으로 변경 사항을 감지하고 웹사이트를 `gh-pages` 브랜치의 `docs` 폴더에 배포합니다.
+
+### 배포 프로세스
+
+1. `main` 브랜치의 `public` 폴더에 변경 사항이 감지됨
+2. GitHub Actions 워크플로우가 실행됨
+3. `public` 폴더의 콘텐츠가 임시 디렉토리로 복사됨
+4. 임시 디렉토리의 내용이 `gh-pages` 브랜치의 `docs` 폴더로 배포됨
 
 ### 수동 배포 방법
 
@@ -58,14 +65,16 @@ npm run dev
 # 의존성 설치
 npm install
 
-# GitHub Pages에 배포
+# GitHub Pages에 배포 (package.json 스크립트를 사용)
 npm run deploy
 ```
+
+> 참고: 수동 배포 방식은 GitHub Actions와 조금 다를 수 있습니다. 수동 배포는 `public` 폴더 전체를 `gh-pages` 브랜치의 루트에 배포합니다.
 
 ### 배포 URL
 
 배포된 웹사이트는 다음 URL에서 접근할 수 있습니다:
-https://opspresso.github.io/langup-web/
+https://opspresso.github.io/langup-web/docs/
 
 ## 라이선스
 
